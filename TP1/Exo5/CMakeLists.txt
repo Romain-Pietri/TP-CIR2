@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.0)
+project(TP1)
+set(CMAKE_C_STANDARD 23)
+add_executable(TP1 main.c)
+#target_link_libraries(TP1 PRIVATE m)
