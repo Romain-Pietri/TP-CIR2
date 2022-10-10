@@ -8,13 +8,18 @@ class Fraction{
         int den;
     public:
     bool Isgood(){
-        return this->den != 0;
+        if(this->den==0){
+            cout<<"ERROR Denominator is 0"<<endl;
+            return false;
+
+        }
+        return 1;
     }
     Fraction(int num, int den){
         this->num = num;
         this->den = den;
         if(!this->Isgood()){
-            cout << "Error: denominator is 0" << endl;
+            
             exit(1);
         }
     }
@@ -139,11 +144,11 @@ class Fraction{
         cout<<endl;
         cout<<"numerator: ";
         is >> f.num;
-        cout<<"denominator: ";
+        cout << "denominator:";
         is >> f.den;
+        
+        }while(!f.Isgood());
         return is;
-        }while(f.Isgood());
-
     }
    
 };
